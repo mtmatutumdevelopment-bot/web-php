@@ -9,6 +9,85 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_5"></a>
 
+<section class="version" id="8.5.8"><!-- {{{ 8.5.8 -->
+<h3>Version 8.5.8</h3>
+<b><?php release_date('02-Jul-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22280); ?> (Incorrect compile error for goto to label preceding try/finally block).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22112); ?> (Assertion when error handler throws during NaN to bool/string coercion).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li>Fixed issues with oversized allocations and signed overflow in bcround() and BcMath\Number::round().</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fix incorrect recurrence check of DatePeriod::createFromISO8601String().</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Read correct value for single and double tags.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22121); ?> (Double free in gdImageSetStyle() after overflow-triggered early return).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix incorrect argument positions for invalid start/end arguments in transliterator_transliterate().</li>
+  <li>Fixed IntlTimeZone::getDisplayName() to synchronize object error state for invalid display types.</li>
+</ul></li>
+<li>Lexbor:
+<ul>
+  <li>Merge patch c3a6847.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22265); ?> (Another tailcall vm_interrupt bug).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20469); ?> (Unsafe inheritance cache replay with reentrant autoloading).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21972); ?> (Corrupted variable type when a typed by-value return contains a reference wrapper).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22187); ?> (Memory corruption (zend_mm_heap corrupted) in openssl_encrypt with AES-WRAP-PAD). (CVE-2026-14355)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed a bypass of the magic ".phar" directory protection in Phar::addEmptyDir() for paths starting with "/.phar", while allowing non-magic directory names that merely share the ".phar" prefix.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Preserve class-name case in ReflectionClass::getProperty() error messages and autoloading.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22218); ?> (SoapServer::handle() crash on $_SERVER not being an array).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22285); ?> (Soap server requires the raw input to be passed to $server-&gt;handle).</li>
+</ul></li>
+<li>Sqlite:
+<ul>
+  <li>Fix error checks for column retrieval.</li>
+</ul></li>
+<li>URI:
+<ul>
+  <li>Add LEXBOR_STATIC to CFLAGS_URI on Windows so ext/uri does not see LXB_API as __declspec(dllimport) when linked statically into PHP.</li>
+  <li>Clean error logs before each Uri\WhatWg\Url wither call so that errors from previous wither calls are not returned the next time a UrlValidationError is thrown.</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed error-related memory leaks.</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed memory leak if deflate initialization fails and there is a dict.</li>
+  <li>Fixed memory leak in inflate_add().</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.5.7"><!-- {{{ 8.5.7 -->
 <h3>Version 8.5.7</h3>
 <b><?php release_date('04-Jun-2026'); ?></b>
@@ -151,7 +230,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set). (CVE-2026-12184)</li>
 </ul></li>
 <li>URI:
 <ul>
@@ -1030,6 +1109,80 @@ changelog_header(8, $MINOR_VERSIONS);
 
 <a id="PHP_8_4"></a>
 
+<section class="version" id="8.4.23"><!-- {{{ 8.4.23 -->
+<h3>Version 8.4.23</h3>
+<b><?php release_date('03-Jul-2026'); ?></b>
+<ul><li>Core:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22280); ?> (Incorrect compile error for goto to label preceding try/finally block).</li>
+</ul></li>
+<li>BCMath:
+<ul>
+  <li>Fixed issues with oversized allocations and signed overflow in bcround() and BcMath\Number::round().</li>
+</ul></li>
+<li>Date:
+<ul>
+  <li>Fix incorrect recurrence check of DatePeriod::createFromISO8601String().</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Fix <?php githubissuel('php/php-src', 22219); ?> (Dom\XMLDocument::schemaValidate fails to resolve xs:QName with prefix from imported schema).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Read correct value for single and double tags.</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22121); ?> (Double free in gdImageSetStyle() after overflow-triggered early return).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19666); ?> (imageconvolution() unexpected nan filter value).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19739); ?> (imageellipse/imagefilledellipse overflow).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 19730); ?> (imageaffine overflow).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Fix incorrect argument positions for uninitialized calendar arguments in IntlCalendar::equals(), ::before(), ::after(), and ::isEquivalentTo(), and for invalid start/end arguments in transliterator_transliterate().</li>
+  <li>Fixed IntlTimeZone::getDisplayName() to synchronize object error state for invalid display types.</li>
+  <li>Fixed Spoofchecker restriction-level APIs to only be exposed with ICU 53 and later.</li>
+</ul></li>
+<li>mysqli:
+<ul>
+  <li>Fix stmt-&gt;query leak in mysqli_execute_query() validation errors.</li>
+</ul></li>
+<li>Opcache:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 20469); ?> (Unsafe inheritance cache replay with reentrant autoloading).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22187); ?> (Memory corruption (zend_mm_heap corrupted) in openssl_encrypt with AES-WRAP-PAD). (CVE-2026-14355)</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li>Fixed a bypass of the magic ".phar" directory protection in Phar::addEmptyDir() for paths starting with "/.phar", while allowing non-magic directory names that merely share the ".phar" prefix.</li>
+</ul></li>
+<li>Reflection:
+<ul>
+  <li>Preserve class-name case in ReflectionClass::getProperty() error messages and autoloading.</li>
+</ul></li>
+<li>Sqlite:
+<ul>
+  <li>Fix error checks for column retrieval.</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li>Fixed memory leak if deflate initialization fails and there is a dict.</li>
+  <li>Fixed memory leak in inflate_add().</li>
+</ul></li>
+<li>Zip:
+<ul>
+  <li>Fixed error-related memory leaks.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
+
 <section class="version" id="8.4.22"><!-- {{{ 8.4.22 -->
 <h3>Version 8.4.22</h3>
 <b><?php release_date('04-Jun-2026'); ?></b>
@@ -1160,7 +1313,7 @@ changelog_header(8, $MINOR_VERSIONS);
 </ul></li>
 <li>Streams:
 <ul>
-  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set).</li>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set). (CVE-2026-12184)</li>
 </ul></li>
 <li>XSL:
 <ul>
@@ -3352,6 +3505,22 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_3"></a>
+
+<section class="version" id="8.3.32"><!-- {{{ 8.3.32 -->
+<h3>Version 8.3.32</h3>
+<b><?php release_date('02-Jul-2026'); ?></b>
+<ul><li>Streams:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 21468); ?> (Segfault in file_get_contents w/ a https URL and a proxy set). (CVE-2026-12184)</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22187); ?> (Memory corruption (zend_mm_heap corrupted) in openssl_encrypt with AES-WRAP-PAD). (CVE-2026-14355)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.3.31"><!-- {{{ 8.3.31 -->
 <h3>Version 8.3.31</h3>
@@ -6061,6 +6230,18 @@ changelog_header(8, $MINOR_VERSIONS);
 
 
 <a id="PHP_8_2"></a>
+
+<section class="version" id="8.2.32"><!-- {{{ 8.2.32 -->
+<h3>Version 8.2.32</h3>
+<b><?php release_date('02-Jul-2026'); ?></b>
+<ul><li>OpenSSL:
+<ul>
+  <li>Fixed bug <?php githubissuel('php/php-src', 22187); ?> (Memory corruption (zend_mm_heap corrupted) in openssl_encrypt with AES-WRAP-PAD). (CVE-2026-14355)</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 
 <section class="version" id="8.2.31"><!-- {{{ 8.2.31 -->
 <h3>Version 8.2.31</h3>

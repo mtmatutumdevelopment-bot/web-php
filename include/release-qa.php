@@ -71,29 +71,42 @@ $QA_RELEASES = [
         ],
     ],
 
-    '8.4.23' => [
+    '8.4.24' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
             'number'     => 1,
-            'sha256_bz2' => 'e15a82d2841aee277e21506e7e9056747035f0c89f05de7d9d0d4199e872b39f',
-            'sha256_gz'  => 'ab863318f529ace5e1f96db1670e3ca537d10668fbe055ca76b7d9d098303137',
-            'sha256_xz'  => 'c5d532ac0d599413a1771ed894102f4d5a255e47a81ffa3475c6dae6d097227a',
-            'date'       => '18 Jun 2026',
-            'baseurl'    => 'https://downloads.php.net/~calvinb/',
+            'sha256_bz2' => '69884d0668993a12b161882576295708de46a2f6b56374a1b161c94afe652d7e',
+            'sha256_gz'  => '0cc5b8c97adbd854222695f3e45667d3b2dd3b9fa1d0f4c9cb0c965a0e291d48',
+            'sha256_xz'  => '39fcc5625ca453232cc46601029ed48b09efe9ea5c76575f365027fbd7b72e8b',
+            'date'       => '16 July 2026',
+            'baseurl'    => 'https://downloads.php.net/~saki/',
         ],
     ],
 
-    '8.5.8' => [
+    '8.5.9' => [
         'active'  => true,
         'release' => [
             'type'       => 'RC',
             'number'     => 1,
-            'sha256_bz2' => '353379137daafd2164011e36349d3ba9625b98f41d82a0451ec53f20462b68a0',
-            'sha256_gz'  => '57f93d2e0d76a26ac955e30cfab81dd910fc48e8bf78b3a15ff67df63a92ac72',
-            'sha256_xz'  => 'b4c8d96c481f3aa9b6cf2b5b01e190a70e657b5decda658b7c0cd11616deb9d4',
-            'date'       => '18 June 2026',
-            'baseurl'    => 'https://downloads.php.net/~daniels/',
+            'sha256_bz2' => 'ce761a2347e2bd6bb9aab5a63d78a2e978df10665619632a8f903b1df3af9420',
+            'sha256_gz'  => 'eaeb7fc128cdce1ee4a16575f55e318a51554295b530dd914a03d08abc9023a3',
+            'sha256_xz'  => '3c4de9f98adda67400e2b52252f5d1c58328d26da64e3cdc8b3a6a3e5d49397b',
+            'date'       => '16 July 2026',
+            'baseurl'    => 'https://downloads.php.net/~edorian/',
+        ],
+    ],
+
+    '8.6.0' => [
+        'active'  => true,
+        'release' => [
+            'type'       => 'alpha',
+            'number'     => 2,
+            'sha256_bz2' => 'b6b725fed428e2f61feb34efb9f813a2d64cc9196d0768c90d1e7284f5407c2c',
+            'sha256_gz'  => '1073459e91e623319bb6264f2aee8e71c676b663d2ac2b6331440d6d2035e7c0',
+            'sha256_xz'  => '27f0d92f7fc945ef962b2a71049632a1c4c061c6318c136a1e62f84b7d240603',
+            'date'       => '16 July 2026',
+            'baseurl'    => 'https://downloads.php.net/~svpernova09/',
         ],
     ],
 ];

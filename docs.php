@@ -5,8 +5,13 @@ use phpweb\I18n\Languages;
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once __DIR__ . '/include/prepend.inc';
 
-site_header("Documentation", ["current" => "docs"]);
-
+site_header(
+    "Documentation",
+    [
+        "current" => "docs",
+        'cache_control' => 5 * 60, // 5 minutes
+    ]
+);
 ?>
 
 <h1>Documentation</h1>

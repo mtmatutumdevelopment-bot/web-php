@@ -325,6 +325,7 @@ function manual_setup($setup): void {
         "prev" => $setup["prev"],
         "next" => $setup["next"],
         "cache" => $lastmod,
+        'cache_control' => 5 * 60, // 5 minutes
         "description" => $setup["this"][2] ?? null,
     ];
     site_header($setup["this"][1] . " - Manual", $config);

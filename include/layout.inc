@@ -456,6 +456,7 @@ function site_header(?string $title = NULL, array $config = []): void
         'classes' => '',
         'layout_span' => 9,
         "cache" => false,
+        'cache_control' => false,
         "headsup" => "",
         'meta_tags' => <<<META
 <meta name="Description" content="{$meta_description}" />
@@ -501,6 +502,13 @@ META
 function site_footer(array $config = []): void
 {
     require __DIR__ . "/footer.inc";
+}
+
+function sha256_html(string $checksum): string
+{
+    $checksum = htmlspecialchars($checksum, ENT_QUOTES, 'UTF-8');
+
+    return '<span class="sha256-row"><span class="sha256">' . $checksum . '</span><button type="button" class="sha256-copy" data-copy-text="' . $checksum . '" aria-label="Copy sha256 checksum">Copy</button></span>';
 }
 
 function get_nav_items(): array {

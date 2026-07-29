@@ -2,6 +2,152 @@
 $OLDRELEASES = array (
   8 => 
   array (
+    '8.5.7' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_5_7.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '04 Jun 2026',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.5.7.tar.gz',
+          'name' => 'PHP 8.5.7 (tar.gz)',
+          'sha256' => 'e5eba93fd6dd3241d0e61e932eb99a3783b40568553fb0e511b660ecd863a049',
+          'date' => '04 Jun 2026',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.5.7.tar.bz2',
+          'name' => 'PHP 8.5.7 (tar.bz2)',
+          'sha256' => '4ef9355f784d4b320151eb3f31c5941c0da297025eedb97f2838b2ce73dd59bf',
+          'date' => '04 Jun 2026',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.5.7.tar.xz',
+          'name' => 'PHP 8.5.7 (tar.xz)',
+          'sha256' => '01ba2ed1c2658dacf91bebc8be6a4885f69b811c7993831fc48e26107ab29985',
+          'date' => '04 Jun 2026',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.4.22' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_4_22.php',
+      ),
+      'tags' => 
+      array (
+      ),
+      'date' => '04 Jun 2026',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.4.22.tar.gz',
+          'name' => 'PHP 8.4.22 (tar.gz)',
+          'sha256' => 'a012c2c9724baf214a70b41b40a7e130906b8855e54268afa5bc4ae17bc9d823',
+          'date' => '04 Jun 2026',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.4.22.tar.bz2',
+          'name' => 'PHP 8.4.22 (tar.bz2)',
+          'sha256' => '4b16e7e2c384ce25e07d28eb949855c4b4fe0d1b7b9ec9c8eebd05d0cfa9c532',
+          'date' => '04 Jun 2026',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.4.22.tar.xz',
+          'name' => 'PHP 8.4.22 (tar.xz)',
+          'sha256' => '696c0f6ad92e94c59059c1eb6e300842b8d050934226efcdf00f2a413cb083cf',
+          'date' => '04 Jun 2026',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.3.31' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_3_31.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '07 May 2026',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.3.31.tar.gz',
+          'name' => 'PHP 8.3.31 (tar.gz)',
+          'sha256' => '4e7baaf0a690e954a20e7ced3dd633ce8cb8094e2b6b612a55e703ecbbdcbf4f',
+          'date' => '07 May 2026',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.3.31.tar.bz2',
+          'name' => 'PHP 8.3.31 (tar.bz2)',
+          'sha256' => 'e6986b1fd37eb25402127fe4a7278a3e03b7f9025bb7a4bd292a271bdf930fb9',
+          'date' => '07 May 2026',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.3.31.tar.xz',
+          'name' => 'PHP 8.3.31 (tar.xz)',
+          'sha256' => '66410cee07f4b2baeb0843140bb2a2b52ef930b5cf9b3d6e6d158b33aae8fa37',
+          'date' => '07 May 2026',
+        ),
+      ),
+      'museum' => false,
+    ),
+    '8.2.31' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/8_2_31.php',
+      ),
+      'tags' => 
+      array (
+        0 => 'security',
+      ),
+      'date' => '07 May 2026',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-8.2.31.tar.gz',
+          'name' => 'PHP 8.2.31 (tar.gz)',
+          'sha256' => '083c2f61cc5f527eb293c4c468a91af46a9678785957e023b2796a9db290d870',
+          'date' => '07 May 2026',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-8.2.31.tar.bz2',
+          'name' => 'PHP 8.2.31 (tar.bz2)',
+          'sha256' => '948183fa04cf261c9b9363c02f428977b9ddf8c0bfdff8e8e1fba816ed570803',
+          'date' => '07 May 2026',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-8.2.31.tar.xz',
+          'name' => 'PHP 8.2.31 (tar.xz)',
+          'sha256' => '95eae411d594fe6f6e5678b76645dc13ae47d3c0a5325c1d969b58dea56ee45a',
+          'date' => '07 May 2026',
+        ),
+      ),
+      'museum' => false,
+    ),
     '8.4.21' => 
     array (
       'announcement' => 

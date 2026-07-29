@@ -75,6 +75,7 @@ if (isset($_GET["serialize"]) || isset($_GET["json"])) {
 site_header("Releases", [
     'current' => 'downloads',
     'css' => '/styles/releases.css',
+    'cache_control' => 60 * 60, // 60 minutes
 ]);
 
 echo "<h1>Unsupported Historical Releases</h1>\n\n";
@@ -218,13 +219,8 @@ function mk_rel(int $major,
             echo " <li>\n";
             if (isset($src['filename'])) {
                 download_link($src["filename"], $src["name"]); echo "<br>\n";
-                $linebreak = '';
-                foreach (['md5', 'sha256'] as $cs) {
-                    if (isset($src[$cs])) {
-                        echo $linebreak;
-                        echo "<span class=\"{$cs}sum\">{$cs}: {$src[$cs]}</span>\n";
-                        $linebreak = "<br/>";
-                    }
+                if (isset($src['sha256'])) {
+                    echo sha256_html($src['sha256']), "\n";
                 }
             } else {
                 echo "<a href=\"{$src['link']}\">{$src['name']}</a>";
